@@ -163,8 +163,13 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(originalFlavors,flavor){
-  return originalFlavors.includes(flavor)
+function filterByWord(originalFlavors,flavor) {
+  const filteredFlavors = [];
+  for(let i = 0; i < originalFlavors.length; i++) {
+    if(originalFlavors[i].includes(flavor)) {
+      filteredFlavors.push(originalFlavors[i]);
+    }
+  } return filteredFlavors
 }
 
 
